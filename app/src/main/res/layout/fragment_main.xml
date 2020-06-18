@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Fragment.MainFragment">
+    <!--header-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:padding="@dimen/_15sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GulV50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+        <!--User name-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="@id/GulV50"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="نام کاربری:"
+                android:textColor="@color/colorGrayLight"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblUserName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="میلیونر"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <!--User ID-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/GulV50">
+
+            <TextView
+                android:id="@+id/lblUserID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="شماره کاربری:"
+                android:textColor="@color/colorGrayLight"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/txtUserID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblUserID"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="1071001"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Buttons-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/btnStartLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center"
+            android:text="شروع کار"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/shape_radius_btn"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+           />
+        <Button
+            android:id="@+id/btnEndLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center"
+            android:background="@drawable/shape_radius_btn"
+            android:text="پایان کار"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_below="@id/btnStartLocation"
+            />
+
+        <TextView
+            android:id="@+id/txtVersionApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="V1.0.0"
+            android:textColor="@color/colorGrayLight"
+            android:textSize="@dimen/_11sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Tools="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <!--لایوت مربوط به وارد کردن url-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constUrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH10Url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH50Url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.54" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH80Url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.8" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgLogoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/logo"
+            android:transitionName="logo"
+            Tools:layout_constraintTop_toBottomOf="@id/gulH10Url"
+            android:interpolator="@anim/linear_interpolator"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relUrl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/shape_radius_input"
+            android:gravity="center_vertical"
+            Tools:layout_constraintTop_toBottomOf="@id/gulH50Url">
+
+            <EditText
+                android:id="@+id/editUrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:hint="آدرس سرور خود را وارد کنید"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgUrl"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_web" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSaveUrl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@drawable/shape_radius_btn"
+            android:gravity="center"
+            android:text="ذخیره"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            Tools:layout_constraintTop_toBottomOf="@id/gulH80Url" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--لایوت مربوط به لودینگ-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.54" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gulH80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            Tools:layout_constraintGuide_percent="0.8" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/logo"
+            android:transitionName="logo"
+            Tools:civ_border_width="@dimen/_2sdp"
+            Tools:layout_constraintTop_toBottomOf="@id/gulH10"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="نرم افزار ردیاب میلیونر"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            Tools:layout_constraintTop_toBottomOf="@id/gulH50" />
+
+        <ProgressBar
+            android:id="@+id/progLoading"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            Tools:layout_constraintBottom_toBottomOf="parent"
+            Tools:layout_constraintLeft_toLeftOf="parent"
+            Tools:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+

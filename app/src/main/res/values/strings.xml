@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">میلیونر لوکیشن</string>
+    <string name="location_updated">location_updated</string>
+    <string name="launch_activity">launch_activity</string>
+    <string name="remove_location_updates">remove_location_updates</string>
+    <string name="permission_rationale">permission_rationale</string>
+    <string name="ok">ok</string>
+    <string name="permission_denied_explanation">permission_denied_explanation</string>
+    <string name="settings">settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
